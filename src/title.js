@@ -1,19 +1,21 @@
-//Ativação de Eventos através do click
+//Ativação de um evento para o mesmo efetuar uma renderização e mudança do state do nosso titulo
 
 import React, {Component} from 'react';
 
 class Titulo extends Component {
     constructor(props){
         super(props);
+        this.state = {texto: "Clique aqui"};
+        this.funcao = this.funcao.bind(this);
     }
 
     funcao(){
-        alert("Você ativou o evento do botão");
+        this.setState({texto: "Você clicou no titulo"});
     }
 
     render(){
         return(
-        <h1 onClick={this.funcao}>Clique aqui!</h1>
+        <h1 onClick={this.funcao}>{this.state.texto}</h1>
         )
     }
 }
