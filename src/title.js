@@ -1,14 +1,19 @@
-//Declarando e importando componentes através de classes (Props)
+//Inclusão de funcionalidades de importação do estilo: Ref
 
 import React, {Component} from 'react';
 
 class Titulo extends Component {
     constructor(props){
         super(props);
+        this.elementoH1 = React.createRef();
     }
+    componentDidMount(){
+        this.elementoH1.current.innerHTML = "Outro Texto";
+    }
+
     render(){
         return(
-            <h1>{this.props.texto}</h1>
+            <h1 ref={this.elementoH1}>Texto de exemplo</h1>
         )
     }
 }
