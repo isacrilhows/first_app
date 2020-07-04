@@ -1,11 +1,14 @@
-//Declarando e importando componentes através de classes
+//Declarando e importando componentes através de classes (Props)
 
 import React, {Component} from 'react';
 
 class Titulo extends Component {
+    constructor(props){
+        super(props);
+    }
     render(){
         return(
-            <h1>Esse é meu Titulo (Classe)</h1>
+            <h1>{this.props.texto}</h1>
         )
     }
 }
