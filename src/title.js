@@ -1,11 +1,13 @@
-//Declarando e importando componentes através de tag (Padrão)
+//Declarando e importando componentes através de classes
 
-import React from 'react';
+import React, {Component} from 'react';
 
-function Titulo() {
-    return (
-        <h1>Esse é o meu titulo</h1>
+class Titulo extends Component {
+    render(){
+        return(
+            <h1>Esse é meu Titulo (Classe)</h1>
         )
+    }
 }
 
 export default Titulo;
