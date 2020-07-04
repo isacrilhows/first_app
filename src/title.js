@@ -1,19 +1,19 @@
-//Padrão de importação elementos com a sincronização de servidores
+//Ativação de Eventos através do click
 
 import React, {Component} from 'react';
 
 class Titulo extends Component {
     constructor(props){
         super(props);
-        this.elementoH1 = React.createRef();
-        this.state = {
-            texto: "Meu Texto Padrão"
-        }
+    }
+
+    funcao(){
+        alert("Você ativou o evento do botão");
     }
 
     render(){
         return(
-        <h1>{this.state.texto}</h1>
+        <h1 onClick={this.funcao}>Clique aqui!</h1>
         )
     }
 }
